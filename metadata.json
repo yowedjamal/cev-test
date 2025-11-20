@@ -1,0 +1,5 @@
+{
+  "name": "VDS Validator & Generator",
+  "description": "A secure dashboard to validate personnel data and generate VDS certificates (CEV) with visual QR code output.",
+  "requestFramePermissions": []
+}
