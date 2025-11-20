@@ -237,4 +237,34 @@ const App: React.FC = () => {
         </div>
 
         {/* Download Section */}
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col md:flex-row items-
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <div className="p-3 bg-slate-100 rounded-full text-slate-600 flex-shrink-0">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-lg font-bold text-slate-900">Mobile Verification App</h3>
+              <p className="text-slate-500 text-sm mt-1">
+                Download the APK to verify generated CEV codes on your Android device.
+              </p>
+            </div>
+          </div>
+          
+          <a 
+            href="./verification-app.apk" 
+            download="verification-app.apk"
+            className="flex items-center justify-center px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-lg font-medium transition-colors shadow-sm min-w-[200px]"
+          >
+            <DownloadIcon />
+            Download APK
+          </a>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default App;

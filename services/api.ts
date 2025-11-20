@@ -1,15 +1,16 @@
 import { API_ENDPOINTS, API_TOKENS } from '../constants';
-import { PersonPayload, GenerationPayload, ValidationResponse, GenerationResponse } from '../types';
+import { GenerationPayload, ValidationResponse, GenerationResponse } from '../types';
 
 /**
  * Validates the personnel data payload.
  */
-export const validateData = async (payload: PersonPayload): Promise<ValidationResponse> => {
+export const validateData = async (payload: GenerationPayload): Promise<ValidationResponse> => {
   try {
     const response = await fetch(API_ENDPOINTS.VALIDATE, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${API_TOKENS.BEARER}`,
       },
       body: JSON.stringify(payload),
     });
